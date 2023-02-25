@@ -44,10 +44,10 @@ radio.onReceivedNumber(function (receivedNumber) {
         basic.pause(50)
     } else if (receivedNumber == 1) {
         modaup()
-        basic.pause(50)
+        basic.pause(100)
     } else if (receivedNumber == 3) {
         modad()
-        basic.pause(50)
+        basic.pause(100)
     }
 })
 function 開9右邊R () {
@@ -93,6 +93,12 @@ function stopstopyourdangerousthing () {
     AnalogPin.P15,
     0,
     AnalogPin.P16,
+    0
+    )
+    sensors.DDMmotor(
+    AnalogPin.P12,
+    0,
+    AnalogPin.P2,
     0
     )
 }
