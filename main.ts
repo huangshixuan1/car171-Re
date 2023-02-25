@@ -13,6 +13,14 @@ function backbackback海道 () {
     pwm
     )
 }
+function modaup () {
+    sensors.DDMmotor(
+    AnalogPin.P12,
+    1,
+    AnalogPin.P2,
+    150
+    )
+}
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 8) {
         gogo宜得利()
@@ -65,6 +73,14 @@ function left旅遊啪啪造 () {
     1,
     AnalogPin.P16,
     pwm
+    )
+}
+function modad () {
+    sensors.DDMmotor(
+    AnalogPin.P12,
+    0,
+    AnalogPin.P2,
+    150
     )
 }
 function stopstopyourdangerousthing () {
