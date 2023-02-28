@@ -16,7 +16,7 @@ function backbackback海道 () {
 function modaup () {
     sensors.DDMmotor(
     AnalogPin.P12,
-    1,
+    0,
     AnalogPin.P2,
     150
     )
@@ -43,18 +43,26 @@ radio.onReceivedNumber(function (receivedNumber) {
         關7左邊L()
         basic.pause(50)
     } else if (receivedNumber == 1) {
-        modaup()
-        basic.pause(100)
+        modadown()
+        basic.pause(25)
     } else if (receivedNumber == 3) {
-        modad()
-        basic.pause(100)
+        modaup()
+        basic.pause(25)
     }
 })
 function 開9右邊R () {
-    pins.servoWritePin(AnalogPin.P1, 80)
+    pins.servoWritePin(AnalogPin.P1, 60)
 }
 function 關7左邊L () {
     pins.servoWritePin(AnalogPin.P1, 0)
+}
+function modadown () {
+    sensors.DDMmotor(
+    AnalogPin.P12,
+    1,
+    AnalogPin.P2,
+    150
+    )
 }
 function left旅遊啪啪造 () {
     pwm += 30
@@ -72,14 +80,6 @@ function left旅遊啪啪造 () {
     1,
     AnalogPin.P16,
     pwm
-    )
-}
-function modad () {
-    sensors.DDMmotor(
-    AnalogPin.P12,
-    0,
-    AnalogPin.P2,
-    150
     )
 }
 function stopstopyourdangerousthing () {
