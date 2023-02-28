@@ -51,7 +51,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 function 開9右邊R () {
-    pins.servoWritePin(AnalogPin.P1, 60)
+    pins.servoWritePin(AnalogPin.P1, 40)
 }
 function 關7左邊L () {
     pins.servoWritePin(AnalogPin.P1, 0)
